@@ -2,6 +2,8 @@ import React from "react";
 import { connect } from "react-redux";
 import { place, clearBoard } from "../redux-app/result";
 
+// import { Spring } from "react-spring";
+
 function compose(fn, ...fns) {
   if (!fns.length) return fn;
   return (...args) => fn(compose(...fns)(...args));
@@ -25,8 +27,11 @@ function Piece({ x, y, children, place }) {
     </g>
   );
 }
+// o
 function Cross(props) {
   return (
+    // <Spring from={{ opacity: 0, marginTop: -1000 }} to={{ opacity: 1, marginTop: 0 }}>
+
     <Piece {...props}>
       <path
         d="M -30 -30 l 60 60 M 30 -30 l -60 60"
@@ -119,6 +124,7 @@ function Game({ grid, place, clearBoard, gameWin }) {
       <br />
       <div style={{ display: "flex", justifyContent: "center" }}>
         <button
+          className="red-button"
           style={{
             border: "none",
             background: "black",
@@ -133,6 +139,7 @@ function Game({ grid, place, clearBoard, gameWin }) {
         </button>
       </div>
     </div>
+    // </Spring>
   );
 }
 export default connect(mapStateToProps, mapDispatchToProps)(Game);

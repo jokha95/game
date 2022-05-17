@@ -5,3 +5,9 @@ body {
   align-items: center;
   background-color: rgb(243, 150, 238);
 }
+.red-button {
+  color: red;
+}
+.red-button:hover {
+  transform: scale(1.2);
+}
