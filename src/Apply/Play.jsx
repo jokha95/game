@@ -1,6 +1,6 @@
 import React from "react";
 import { connect } from "react-redux";
-import { place, clearBoard } from "../redux-app/actions";
+import { place, clearBoard } from "../redux-app/result";
 
 function compose(fn, ...fns) {
   if (!fns.length) return fn;
@@ -121,7 +121,7 @@ function Game({ grid, place, clearBoard, gameWin }) {
         <button
           style={{
             border: "none",
-            background: "blue",
+            background: "black",
             color: "white",
             fontSize: "1em",
             padding: ".5em 1em",

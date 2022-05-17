@@ -1,5 +1,5 @@
 import { reducer, initialState } from "./index";
-import { clearBoard } from "./actions";
+import { clearBoard } from "./result";
 
 describe("reducer", () => {
   const afterTwo = ["Abcd", "Efgh"].map(setName).reduce(reducer, initialState);

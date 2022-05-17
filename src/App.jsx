@@ -1,5 +1,5 @@
 import { connect } from "react-redux";
-import { setName } from "./redux-app/actions";
+import { setName } from "./redux-app/result";
 import AppPresenter from "./Apply";
 function mapStateToProps(state) {
   return state;
